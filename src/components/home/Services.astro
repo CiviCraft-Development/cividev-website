@@ -1,0 +1,65 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Development',
+    description:
+      'We offer comprehensive development services, creating plugins, websites, Discord bots, and more. From small-scale tasks to large projects, we deliver tailored solutions with precision.',
+  },
+  {
+    step: '02',
+    name: '3D Models',
+    description:
+      'Our team creates custom 3D models that elevate your projects, from immersive in-game assets to visually stunning promotional materials.',
+  },
+  {
+    step: '03',
+    name: 'Content Production',
+    description:
+      'We craft captivating content, including storylines, quests, and media scripts, to engage and inspire your audience across platforms.',
+  },
+  {
+    step: '04',
+    name: 'Server Setup',
+    description:
+      'We handle everything from initial server setup to fine-tuning configurations, ensuring a smooth and efficient environment ready for your community.',
+  },
+  {
+    step: '05',
+    name: 'Support & Maintenance',
+    description:
+      'Our dedicated support services include troubleshooting, updates, and proactive maintenance to keep your projects running seamlessly.',
+  },
+  {
+    step: '06',
+    name: 'Developer Education',
+    description:
+      'Through our website and resources, we empower aspiring developers with guides, tutorials, and insights into building and managing online communities.',
+  }
+
+
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
